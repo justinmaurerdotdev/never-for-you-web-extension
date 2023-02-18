@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Never \"For You\". Always \"Following\".",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Automatically click on the 'Following' tab on Twitter",
   "icons": {
     "48": "icons/icon-sm.png",
@@ -12,12 +12,8 @@
   ],
   "content_scripts": [
     {
-      "matches": [
-        "https://twitter.com/*"
-      ],
-      "js": [
-        "scripts/main.js"
-      ]
+      "matches": [ "*://twitter.com/home" ],
+      "js": [ "content_script.js" ]
     }
   ]
 }
