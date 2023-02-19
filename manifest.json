@@ -8,12 +8,12 @@
     "96": "icons/icon-lg.png"
   },
   "permissions": [
-    "https://twitter.com/*"
+    "activeTab"
   ],
   "content_scripts": [
     {
       "matches": [ "*://twitter.com/home" ],
-      "js": [ "content_script.js" ]
+      "js": [ "scripts/content_script.js" ]
     }
   ]
 }
