@@ -5,7 +5,7 @@ function click_following() {
 if (document.readyState === "complete") {
     click_following();
 } else {
-    window.onload = function() {
+    document.onreadystatechange = function() {
         click_following();
     };
 }

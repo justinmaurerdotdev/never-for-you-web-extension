@@ -1,19 +1,23 @@
 {
   "manifest_version": 3,
   "name": "Never \"For You\". Always \"Following\".",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automatically click on the 'Following' tab on Twitter",
   "icons": {
     "48": "icons/icon-sm.png",
     "96": "icons/icon-lg.png"
   },
-  "permissions": [
-    "activeTab"
-  ],
   "content_scripts": [
     {
-      "matches": [ "*://twitter.com/home" ],
-      "js": [ "scripts/content_script.js" ]
+      "js": [
+        "scripts/content_script.js"
+      ],
+      "matches": [
+        "https://twitter.com/home"
+      ]
     }
+  ],
+  "host_permissions": [
+    "*://twitter.com/*"
   ]
 }
